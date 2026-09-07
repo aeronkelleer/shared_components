@@ -37,6 +37,11 @@ export enum MediaPrefix {
   MOB = '_mob',
 }
 
+export enum InputLegendKind {
+  INNER = 'INNER',
+  OUTER = 'OUTER',
+}
+
 // %------------------------ store ------------------------% //
 export enum NameSpace {
   OPEN_MODALS = 'OPEN_MODALS',

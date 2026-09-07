@@ -1,0 +1,38 @@
+@use '../../../styles/abstracts' as *;
+
+// ^======================== form-element ========================^ //
+
+// $padding-inline: 16px;
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+
+  &._hidden {
+    display: none;
+  }
+}
+
+.field {
+  display: flex;
+  background-color: var(--gray100);
+  padding: 4px;
+  // border-radius: 8px;
+  transition: all 250ms;
+  border: 1px solid transparent;
+  height: 48px;
+  border-radius: 16px;
+
+  @include HOVER {
+    border-color: var(--blue200);
+  }
+}
+
+.legend {}
+
+
+.error {}
+
+.button {
+  height: 100% !important;
+}

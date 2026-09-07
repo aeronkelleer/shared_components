@@ -1,0 +1,93 @@
+@use '../../../styles/abstracts/' as *;
+
+// ^======================== text-field ========================^ //
+
+.text-field {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-inline: 16px;
+  position: relative;
+  
+  
+  color: var(--primary);
+  font-size: 16px;
+  
+
+  &:has(input:focus) {
+    border-color: var(--blue300);
+  }
+
+  &:has(textarea) {
+    height: 120px;
+    padding-block: 16px;
+  }
+
+  &:has(.legend) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-block: 8px;
+    justify-content: space-between;
+
+    * {
+      line-height: 1.2;
+    }
+
+    input {
+      font-size: 14px;
+      height: auto;
+    }
+
+    legend {
+      font-size: 12px;
+    }
+  }
+
+  &:has(input:disabled) {
+    color: var(--disable);
+  }
+
+  &._invalid {
+    border-color: var(--orange70) !important;
+
+    .input {
+      color: var(--orange70);
+    }
+  }
+}
+
+.legend {
+  // color: var(--nutral75);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  font-size: 16px;
+  resize: none;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus {
+    transition: background-color 0s 60000000s !important;
+  }
+
+  &::placeholder {
+    color: var(--secondary);
+  }
+}
+
+.edit-button {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.calendar-icon {
+  margin-right: 10px;
+}

@@ -1,0 +1,20 @@
+@use '../../../styles/abstracts/' as *;
+
+// ^======================== input-legend ========================^ //
+
+.input-legend {
+  margin-bottom: 18px;
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+
+  @include MEDIA($CONT_WIDTH) {
+    font-size: adapt(18px, 16px);
+    margin-bottom: adapt(18px, 8px);
+  }
+
+  @include MEDIA($TAB_WIDTH) {
+    line-height: 22px;
+  }
+}
